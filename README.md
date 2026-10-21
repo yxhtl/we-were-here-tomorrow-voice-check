@@ -8,7 +8,7 @@
 
 采用浅色纸张、深绿与铁锈红的电台检查风格；原生 SVG 为原创抽象信号示意，不是实时连接检测。无需账号、付费接口、第三方素材、外部字体或网页麦克风权限。不采集录音，不发送统计。
 
-源码仓库：https://github.com/yxhtl/we-were-here-tomorrow-voice-check 。本轮交付本地中英界面及验证结果。没有确定正式部署网址，因此不预填 canonical、hreflang 的绝对网址或 sitemap；发布时按实际地址配置。网站尚未部署或接入统计。
+源码仓库：https://github.com/yxhtl/we-were-here-tomorrow-voice-check 。GitHub Pages 使用 main 分支的 docs/ 作为发布目录；英文正式网址为 https://yxhtl.github.io/we-were-here-tomorrow-voice-check/ ，中文为其下的 zh.html。两种语言的 canonical、hreflang 和 sitemap.xml 均指向该正式地址。尚未接入访问统计或提交 GSC。
 
 ## 需求与判断依据
 
@@ -37,4 +37,6 @@
 
 ## 源码提交
 
-本项目独立 Git 仓库使用 main 分支和 github HTTPS 远端。先运行 `bash release.sh` 预检，再用 `bash release.sh --push "中文提交说明"` 提交推送。未跟踪新文件须在 `--` 后逐个点名。脚本校验项目根目录、分支、固定远端、空暂存区、脚本语法和远端读取；不强推、不自动重试，不触发部署。proof/ 和 node_modules/ 不提交。
+本项目独立 Git 仓库使用 main 分支和 github HTTPS 远端。先运行 `bash release.sh` 预检，再用 `bash release.sh --push "中文提交说明"` 提交推送。未跟踪新文件须在 `--` 后逐个点名。脚本校验项目根目录、分支、固定远端、空暂存区、脚本语法和远端读取；不强推、不自动重试。每次运行都会生成并核对 docs/，只复制七个公开资源，不发布 README、工具脚本或验收目录。proof/ 和 node_modules/ 不提交。
+
+GitHub Pages 启用后，推送 main 中的 docs/ 更新会触发自动部署。push 成功和网站部署成功需要分别核验；以 Pages 构建状态、对应提交和线上 HTTP/交互结果判断是否上线。

@@ -34,6 +34,8 @@ case "${1:-}" in
   *) die '用法：bash release.sh 或 bash release.sh --push "提交说明" [-- 新文件 ...] 或 bash release.sh --push-only' ;;
 esac
 
+node tools/build.cjs
+node tools/check-site.cjs
 node --check app.js
 node --check tools/serve.cjs
 git diff --check
@@ -52,4 +54,4 @@ if [[ -n "${message:-}" ]]; then
   git commit -m "$message"
 fi
 network_git push -u github "HEAD:refs/heads/$branch" || die "推送失败；本地提交已保留，不自动重试。"
-echo "推送完成；未部署网站，未接入统计。"
+echo "推送完成；Pages 将按 main 的 docs/ 自动构建，部署结果需要另行验证。"

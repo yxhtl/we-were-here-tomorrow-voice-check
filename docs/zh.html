@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="We Were Here Tomorrow 语音没声音、队友听不到或连接语音服务器失败？按系统麦克风、游戏内语音、网络连接三类问题逐步排查。PC 中文指南。">
+  <meta name="theme-color" content="#eeebe3">
+  <title>We Were Here Tomorrow 语音没声音？PC 麦克风排查 | Radio Check</title>
+  <link rel="canonical" href="https://yxhtl.github.io/we-were-here-tomorrow-voice-check/zh.html">
+  <link rel="alternate" hreflang="en" href="https://yxhtl.github.io/we-were-here-tomorrow-voice-check/">
+  <link rel="alternate" hreflang="zh-CN" href="https://yxhtl.github.io/we-were-here-tomorrow-voice-check/zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://yxhtl.github.io/we-were-here-tomorrow-voice-check/">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#check">跳到语音排查</a>
+  <header class="site-header wrap">
+    <a class="brand" href="zh.html" aria-label="Radio Check 首页"><span class="brand-icon" aria-hidden="true">↗</span> RADIO<span class="brand-slash">/</span>CHECK</a>
+    <nav aria-label="主导航"><a href="#sources">查看依据</a><a class="language" href="index.html" lang="en" hreflang="en">English <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> WE WERE HERE TOMORROW · PC 语音排查</p>
+        <h1 id="hero-title">搭档就在那头，<br><em>怎么听不到？</em></h1>
+        <p class="hero-intro">语音突然没声音，先分清是哪一层出了问题。系统麦克风、游戏内设置、语音服务器，按你的症状一步步查。</p>
+        <a class="primary-link" href="#check">看看我该先查什么 <span aria-hidden="true">↘</span></a>
+        <p class="privacy-line">不录音，也不需要授予网页麦克风权限。</p>
+      </div>
+      <div class="radio-art" aria-hidden="true">
+        <div class="art-label"><span>FIELD NOTES / 01</span><span>VOICE LINK</span></div>
+        <svg viewBox="0 0 460 220" fill="none"><circle cx="230" cy="108" r="87" stroke="currentColor" stroke-opacity=".12"/><circle cx="230" cy="108" r="58" stroke="currentColor" stroke-opacity=".18"/><path d="M53 108h24l8-19 12 40 12-62 12 83 13-105 14 127 13-88 12 43 10-19h22m50 0h20l9-22 12 42 12-61 14 85 13-107 13 125 13-84 12 43 9-21h28" stroke="currentColor" stroke-width="3"/><circle cx="230" cy="108" r="19" fill="#bd4b31"/><path d="m225 103 10 10m0-10-10 10" stroke="#eeebe3" stroke-width="2"/><path d="M25 19h24M25 19v24M435 19h-24M435 19v24M25 197h24M25 197v-24M435 197h-24M435 197v-24" stroke="currentColor" stroke-opacity=".4"/></svg>
+        <div class="art-stages"><span><b>01</b> 输入设备</span><span><b>02</b> 游戏设置</span><span><b>03</b> 网络连接</span></div>
+        <div class="art-note">两个人，一段不该中断的对话。</div>
+      </div>
+    </section>
+    <section class="quick-answer wrap" aria-labelledby="quick-title"><span class="section-tag">先看这一条</span><div><h2 id="quick-title">Windows 能听到你的声音吗？</h2><p>如果系统麦克风测试也没声音，先查输入设备。如果系统正常、只有游戏不行，先查游戏选中的麦克风。明确提示语音服务器连接失败，则先查连接。</p></div></section>
+    <section class="checker wrap" id="check" aria-labelledby="check-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / 选出你遇到的情况</p><h2 id="check-title">声音是从哪一步断掉的？</h2></div><span class="small-note">适用于 PC · 你和搭档都可以查</span></div>
+      <p class="choose-hint">选最接近的一项。这是一份手动排查清单，不会自动检测游戏。</p>
+      <div class="choices" role="group" aria-label="选择语音问题">
+        <button type="button" data-route="system" aria-controls="answer-system" aria-pressed="false"><span class="choice-number">01</span><strong>麦克风在哪里都没声音</strong><span>Windows 测试或其他应用也听不到我。</span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-route="game" aria-controls="answer-game" aria-pressed="false"><span class="choice-number">02</span><strong>只有这款游戏听不到</strong><span>其他地方能用，搭档却听不到我。</span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-route="server" aria-controls="answer-server" aria-pressed="false"><span class="choice-number">03</span><strong>提示语音服务器连接失败</strong><span>出现 Connection failed 或 Can’t connect。</span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+      </div>
+      <p class="selection-help" id="selection-help">选一个症状，展开对应清单。也可以<a href="#all-checks" id="show-all">查看全部步骤</a>。</p>
+      <noscript><p class="notice">下方已列出三类清单。不开启 JavaScript 也能阅读完整步骤。</p></noscript>
+      <div id="all-checks">
+        <article class="answer" id="answer-system" data-answer="system" aria-labelledby="title-system">
+          <div class="answer-heading"><div><p class="eyebrow">输入设备 / WINDOWS 11</p><h3 id="title-system" tabindex="-1">先在游戏外测一下。</h3></div><span class="answer-badge">从输入设备开始</span></div>
+          <p class="answer-intro">系统测试没声音，说明要先查输入链路；它不能判断游戏的语音连接是否正常。</p>
+          <ol class="checklist">
+            <li><label><input type="checkbox"><span><strong>看看耳机和静音开关。</strong>重新插好设备，确认选中的是你准备使用的麦克风。</span></label></li>
+            <li><label><input type="checkbox"><span><strong>运行 Windows 麦克风测试。</strong>打开“设置 → 系统 → 声音 → 输入”，选中麦克风，点“开始测试”，说几句话后点“停止测试”和“播放”。音量太低时调整输入音量。<a href="#source-windows">[1]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>确认桌面应用能访问麦克风。</strong>Windows 11 中打开“设置 → 隐私和安全性 → 麦克风”，检查“麦克风访问权限”和“允许桌面应用访问麦克风”。<a href="#source-permissions">[2]</a></span></label></li>
+          </ol>
+          <div class="answer-bottom"><p class="progress" aria-live="polite">已标记 0 / 3 项</p><button type="button" class="text-button reset">清空勾选 ↺</button></div>
+          <p class="next-step">系统测试已经有声音？<a href="#answer-game" data-next="game">接着查游戏内设置 →</a></p>
+          <details class="unresolved"><summary>系统测试仍然没声音？</summary><p>先按微软的麦克风指南继续检查，再处理游戏内的问题。需要求助时，记下耳机型号，以及 Windows 测试有没有录到声音。</p><a class="source-link" href="https://support.microsoft.com/en-us/windows/hardware/drivers/fix-microphone-problems">打开微软排查指南 ↗</a></details>
+        </article>
+        <article class="answer" id="answer-game" data-answer="game" aria-labelledby="title-game">
+          <div class="answer-heading"><div><p class="eyebrow">游戏内 / 音频设置</p><h3 id="title-game" tabindex="-1">系统和游戏，选同一个麦克风。</h3></div><span class="answer-badge">两位玩家都查一遍</span></div>
+          <p class="answer-intro">让搭档也检查一次。其他应用能用，只能证明设备在那个应用里正常，不代表游戏选对了输入。</p>
+          <ol class="checklist">
+            <li><label><input type="checkbox"><span><strong>统一系统默认输入与游戏输入。</strong>在 Windows 中选对默认麦克风，再到游戏的音频设置中选同一台设备。<a href="#source-game">[3]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>核对输入音量和收听音量。</strong>确认系统和游戏的麦克风音量不是过低。如果是你听不到搭档，也让对方检查输入。<a href="#source-game">[3]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>试一次直接邀请好友。</strong>开发者建议用“Invite a friend（邀请好友）”代替创建房间。暂时拔下无关 USB 设备，避免选错输入。<a href="#source-game">[3]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>用对讲机时轮流说话。</strong>你松开通话键，再让搭档回答。开发者提醒，同时按住通话可能导致彼此听不见。<a href="#source-game">[3]</a></span></label></li>
+          </ol>
+          <div class="answer-bottom"><p class="progress" aria-live="polite">已标记 0 / 4 项</p><button type="button" class="text-button reset">清空勾选 ↺</button></div>
+          <p class="next-step">实际上有连接报错？<a href="#answer-server" data-next="server">转到服务器连接清单 →</a></p>
+          <details class="unresolved"><summary>仍然只有游戏内失效？</summary><p>如果设置没错，但语音在游戏中途突然停止，这份清单不能排除游戏本身的故障。记下游戏版本、双方平台、报错原文，以及此时 Windows 测试是否正常，再通过官方支持求助。</p><a class="source-link" href="https://support.totalmayhemgames.com/hc/en-us/articles/34584077997725-My-sound-microphone-or-walkie-talkie-does-not-work-We-Were-Here-Tomorrow">打开开发者的 PC 音频指南 ↗</a></details>
+        </article>
+        <article class="answer" id="answer-server" data-answer="server" aria-labelledby="title-server">
+          <div class="answer-heading"><div><p class="eyebrow">网络 / 明确出现连接错误</p><h3 id="title-server" tabindex="-1">这次先查连接。</h3></div><span class="answer-badge">CONNECTION FAILED</span></div>
+          <p class="answer-intro">麦克风正常，不代表能连上语音服务器。这里不会实时检测服务器是否在线。</p>
+          <ol class="checklist">
+            <li><label><input type="checkbox"><span><strong>对照双方的游戏区域。</strong>按开发者的建议，检查游戏里选择的区域是否符合所在地，并与搭档保持一致。<a href="#source-server">[4]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>检查当前网络条件。</strong>使用稳定连接；有条件时对照有线网络。校园、公司等公共网络可能限制语音流量。<a href="#source-server">[4]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>验证游戏文件后重试。</strong>使用启动器的文件验证功能。Steam 中右键游戏打开“属性 → 已安装文件 → 验证游戏文件的完整性”。<a href="#source-server">[4]</a></span></label></li>
+          </ol>
+          <div class="answer-bottom"><p class="progress" aria-live="polite">已标记 0 / 3 项</p><button type="button" class="text-button reset">清空勾选 ↺</button></div>
+          <p class="next-step">没有连接报错，系统也录不到声音？<a href="#answer-system" data-next="system">回到麦克风测试 →</a></p>
+          <details class="unresolved"><summary>还是连不上？</summary><p>开发者还列出了地区和网络限制。向官方求助时，带上报错原文、平台、所选区域和网络类型。单纯调高麦克风音量，无法解决所有连接失败。</p><a class="source-link" href="https://support.totalmayhemgames.com/hc/en-us/articles/34583628414365-Can-t-connect-to-the-voice-server-connection-failed-We-Were-Here-Tomorrow">打开开发者的连接指南 ↗</a></details>
+        </article>
+      </div>
+    </section>
+    <section class="scope wrap" aria-labelledby="scope-title"><span class="section-tag">适用范围</span><div><h2 id="scope-title">查的是 Tomorrow，不是系列旧作。</h2><p>本页针对 We Were Here Tomorrow 的 PC 玩家。主机端菜单不同。部分官方支持文字也提到了旧作，这里不会把那些办法直接当成本作的已确认修复。</p><p>依据公开支持资料整理，核对日期：<time datetime="2026-10-21">2026 年 10 月 21 日</time>。尚未在游戏内实测。勾完清单不代表语音一定恢复。</p></div></section>
+    <section class="sources wrap" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">每一步，都能找到依据。</h2><span class="small-note">对应上方步骤中的编号</span></div><ol><li id="source-windows"><a href="https://support.microsoft.com/en-us/windows/hardware/drivers/how-to-set-up-and-test-microphones-in-windows">微软 / 设置和测试麦克风 ↗</a></li><li id="source-permissions"><a href="https://support.microsoft.com/en-us/windows/hardware/drivers/fix-microphone-problems">微软 / 麦克风权限与排查 ↗</a></li><li id="source-game"><a href="https://support.totalmayhemgames.com/hc/en-us/articles/34584077997725-My-sound-microphone-or-walkie-talkie-does-not-work-We-Were-Here-Tomorrow">Total Mayhem Games / Tomorrow 音频支持 ↗</a></li><li id="source-server"><a href="https://support.totalmayhemgames.com/hc/en-us/articles/34583628414365-Can-t-connect-to-the-voice-server-connection-failed-We-Were-Here-Tomorrow">Total Mayhem Games / Tomorrow 连接支持 ↗</a></li></ol></section>
+  </main>
+  <footer class="wrap"><span class="brand-small">RADIO / CHECK</span><p>独立玩家指南，与 Total Mayhem Games 无关联。</p><a href="#hero-title">回到顶部 ↑</a></footer>
+</body>
+</html>
