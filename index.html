@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="We Were Here Tomorrow voice chat not working? Separate Windows microphone problems, in-game silence and voice-server connection errors with this PC checklist.">
+  <meta name="theme-color" content="#eeebe3">
+  <title>We Were Here Tomorrow Voice Chat Not Working? | Radio Check</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#check">Skip to voice check</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Radio Check home"><span class="brand-icon" aria-hidden="true">↗</span> RADIO<span class="brand-slash">/</span>CHECK</a>
+    <nav aria-label="Main navigation"><a href="#sources">Sources</a><a class="language" href="zh.html" lang="zh-CN" hreflang="zh-CN">中文 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> WE WERE HERE TOMORROW · PC GUIDE</p>
+        <h1 id="hero-title">Can’t hear your<br><em>co-op partner?</em></h1>
+        <p class="hero-intro">If voice chat goes quiet, start with the right problem. Check your microphone, game settings or voice-server connection—one layer at a time.</p>
+        <a class="primary-link" href="#check">Find my next check <span aria-hidden="true">↘</span></a>
+        <p class="privacy-line">No recording. No microphone permission needed.</p>
+      </div>
+      <div class="radio-art" aria-hidden="true">
+        <div class="art-label"><span>FIELD NOTES / 01</span><span>VOICE LINK</span></div>
+        <svg viewBox="0 0 460 220" fill="none"><circle cx="230" cy="108" r="87" stroke="currentColor" stroke-opacity=".12"/><circle cx="230" cy="108" r="58" stroke="currentColor" stroke-opacity=".18"/><path d="M53 108h24l8-19 12 40 12-62 12 83 13-105 14 127 13-88 12 43 10-19h22m50 0h20l9-22 12 42 12-61 14 85 13-107 13 125 13-84 12 43 9-21h28" stroke="currentColor" stroke-width="3"/><circle cx="230" cy="108" r="19" fill="#bd4b31"/><path d="m225 103 10 10m0-10-10 10" stroke="#eeebe3" stroke-width="2"/><path d="M25 19h24M25 19v24M435 19h-24M435 19v24M25 197h24M25 197v-24M435 197h-24M435 197v-24" stroke="currentColor" stroke-opacity=".4"/></svg>
+        <div class="art-stages"><span><b>01</b> DEVICE</span><span><b>02</b> GAME</span><span><b>03</b> NETWORK</span></div>
+        <div class="art-note">Two players. One conversation.</div>
+      </div>
+    </section>
+    <section class="quick-answer wrap" aria-labelledby="quick-title"><span class="section-tag">START HERE</span><div><h2 id="quick-title">Can Windows hear you?</h2><p>If its microphone test is silent too, start with the device. If Windows hears you but the game does not, check the game’s input. An explicit voice-server error needs a connection check.</p></div></section>
+    <section class="checker wrap" id="check" aria-labelledby="check-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / CHOOSE YOUR SYMPTOM</p><h2 id="check-title">Where does the silence start?</h2></div><span class="small-note">For PC players · both partners can use this</span></div>
+      <p class="choose-hint">Choose the closest match. These are manual checks, not an automatic diagnosis.</p>
+      <div class="choices" role="group" aria-label="Choose a voice problem">
+        <button type="button" data-route="system" aria-controls="answer-system" aria-pressed="false"><span class="choice-number">01</span><strong>My mic is silent everywhere</strong><span>Windows or another app cannot hear me.</span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-route="game" aria-controls="answer-game" aria-pressed="false"><span class="choice-number">02</span><strong>It only fails in this game</strong><span>My mic works elsewhere, but not with my partner.</span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" data-route="server" aria-controls="answer-server" aria-pressed="false"><span class="choice-number">03</span><strong>I see a voice-server error</strong><span>“Connection failed” or “Can’t connect”.</span><span class="choice-arrow" aria-hidden="true">↗</span></button>
+      </div>
+      <p class="selection-help" id="selection-help">Pick a symptom to see its checklist. Or <a href="#all-checks" id="show-all">read all checks</a>.</p>
+      <noscript><p class="notice">All three checklists are available below. JavaScript is only needed to filter them.</p></noscript>
+      <div id="all-checks">
+        <article class="answer" id="answer-system" data-answer="system" aria-labelledby="title-system">
+          <div class="answer-heading"><div><p class="eyebrow">DEVICE / WINDOWS 11</p><h3 id="title-system" tabindex="-1">Start outside the game.</h3></div><span class="answer-badge">CHECK THE INPUT FIRST</span></div>
+          <p class="answer-intro">A silent Windows test points to the input path. It does not tell us whether the game’s voice connection works.</p>
+          <ol class="checklist">
+            <li><label><input type="checkbox"><span><strong>Check the headset and its mute switch.</strong> Reconnect it and select the microphone you actually want to use.</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Run the Windows microphone test.</strong> Open Settings → System → Sound → Input. Select your mic, choose Start test, speak, then Stop test and Play. Adjust input volume if needed. <a href="#source-windows">[1]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Check desktop-app microphone access.</strong> In Windows 11, open Settings → Privacy &amp; security → Microphone. Check Microphone access and Let desktop apps access your microphone. <a href="#source-permissions">[2]</a></span></label></li>
+          </ol>
+          <div class="answer-bottom"><p class="progress" aria-live="polite">0 / 3 checks marked</p><button type="button" class="text-button reset">Clear checks ↺</button></div>
+          <p class="next-step">Windows can hear you now? <a href="#answer-game" data-next="game">Continue with the game checks →</a></p>
+          <details class="unresolved"><summary>Still silent in Windows?</summary><p>Use Microsoft’s microphone troubleshooting guide. Get the system test working before treating this as a game-only issue. If contacting support, note the headset model and whether the Windows test recorded your voice.</p><a class="source-link" href="https://support.microsoft.com/en-us/windows/hardware/drivers/fix-microphone-problems">Open Microsoft’s troubleshooting guide ↗</a></details>
+        </article>
+        <article class="answer" id="answer-game" data-answer="game" aria-labelledby="title-game">
+          <div class="answer-heading"><div><p class="eyebrow">GAME / AUDIO SETTINGS</p><h3 id="title-game" tabindex="-1">Use the same mic in both places.</h3></div><span class="answer-badge">BOTH PLAYERS CHECK</span></div>
+          <p class="answer-intro">Ask your partner to run these checks too. Working audio in another app does not prove the game selected that input.</p>
+          <ol class="checklist">
+            <li><label><input type="checkbox"><span><strong>Match the Windows and game microphone.</strong> Choose your intended input as the Windows default and select the same device in the game’s audio settings. <a href="#source-game">[3]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Check input and listening levels.</strong> Make sure microphone levels in Windows and the game are audible. If you cannot hear your partner, ask them to check their input too. <a href="#source-game">[3]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Test a direct friend invitation.</strong> The developer suggests “Invite a friend” instead of creating a room. Temporarily unplug unnecessary USB devices that could be selected as an input. <a href="#source-game">[3]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Test the walkie-talkie one person at a time.</strong> Release the talk button before your partner replies. The developer warns that simultaneous transmission can prevent hearing each other. <a href="#source-game">[3]</a></span></label></li>
+          </ol>
+          <div class="answer-bottom"><p class="progress" aria-live="polite">0 / 4 checks marked</p><button type="button" class="text-button reset">Clear checks ↺</button></div>
+          <p class="next-step">Seeing a connection error instead? <a href="#answer-server" data-next="server">Switch to the server checklist →</a></p>
+          <details class="unresolved"><summary>Still failing only in the game?</summary><p>If the settings are correct and the mic stops mid-session, these checks cannot rule out a game bug. Note the game version, each player’s platform, the exact error and whether Windows still records audio. Send those details through official support.</p><a class="source-link" href="https://support.totalmayhemgames.com/hc/en-us/articles/34584077997725-My-sound-microphone-or-walkie-talkie-does-not-work-We-Were-Here-Tomorrow">Open the developer’s PC audio guide ↗</a></details>
+        </article>
+        <article class="answer" id="answer-server" data-answer="server" aria-labelledby="title-server">
+          <div class="answer-heading"><div><p class="eyebrow">NETWORK / EXPLICIT CONNECTION ERROR</p><h3 id="title-server" tabindex="-1">Check the link, not just the mic.</h3></div><span class="answer-badge">CONNECTION FAILED</span></div>
+          <p class="answer-intro">A working microphone does not prove you can reach the voice server. This page does not check server availability.</p>
+          <ol class="checklist">
+            <li><label><input type="checkbox"><span><strong>Compare your in-game regions.</strong> Both players should check that the selected region matches their location and each other, as the developer recommends. <a href="#source-server">[4]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Check the connection you are using.</strong> Test a stable connection, preferably wired if available. Campus, work or other public networks may restrict voice traffic. <a href="#source-server">[4]</a></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Verify the game files.</strong> Use your launcher’s file verification, then test again. In Steam: Library → game Properties → Installed Files → Verify integrity of game files. <a href="#source-server">[4]</a></span></label></li>
+          </ol>
+          <div class="answer-bottom"><p class="progress" aria-live="polite">0 / 3 checks marked</p><button type="button" class="text-button reset">Clear checks ↺</button></div>
+          <p class="next-step">No server error, and Windows is silent too? <a href="#answer-system" data-next="system">Go back to the microphone test →</a></p>
+          <details class="unresolved"><summary>Still unable to connect?</summary><p>The developer also documents regional and network restrictions. Record the exact error, platform, selected region and network type for support. Changing microphone levels alone cannot resolve every connection failure.</p><a class="source-link" href="https://support.totalmayhemgames.com/hc/en-us/articles/34583628414365-Can-t-connect-to-the-voice-server-connection-failed-We-Were-Here-Tomorrow">Open the developer’s connection guide ↗</a></details>
+        </article>
+      </div>
+    </section>
+    <section class="scope wrap" aria-labelledby="scope-title"><span class="section-tag">KNOW THE LIMITS</span><div><h2 id="scope-title">Tomorrow, not another game in the series.</h2><p>This is a PC checklist for We Were Here Tomorrow. Console menus differ. Some official support text refers to older games; those workarounds are not treated as confirmed fixes for Tomorrow here.</p><p>Based on published support guidance, checked <time datetime="2026-10-21">21 Oct 2026</time>. Not tested inside the game. Completing a checklist is not a promise that voice chat is fixed.</p></div></section>
+    <section class="sources wrap" id="sources" aria-labelledby="sources-title"><div class="section-heading"><h2 id="sources-title">Go to the source.</h2><span class="small-note">Official guidance, attached to each check</span></div><ol><li id="source-windows"><a href="https://support.microsoft.com/en-us/windows/hardware/drivers/how-to-set-up-and-test-microphones-in-windows">Microsoft / Set up and test a microphone ↗</a></li><li id="source-permissions"><a href="https://support.microsoft.com/en-us/windows/hardware/drivers/fix-microphone-problems">Microsoft / Microphone access &amp; troubleshooting ↗</a></li><li id="source-game"><a href="https://support.totalmayhemgames.com/hc/en-us/articles/34584077997725-My-sound-microphone-or-walkie-talkie-does-not-work-We-Were-Here-Tomorrow">Total Mayhem Games / Tomorrow audio support ↗</a></li><li id="source-server"><a href="https://support.totalmayhemgames.com/hc/en-us/articles/34583628414365-Can-t-connect-to-the-voice-server-connection-failed-We-Were-Here-Tomorrow">Total Mayhem Games / Tomorrow connection support ↗</a></li></ol></section>
+  </main>
+  <footer class="wrap"><span class="brand-small">RADIO / CHECK</span><p>Independent fan guide. Not affiliated with Total Mayhem Games.</p><a href="#hero-title">Back to top ↑</a></footer>
+</body>
+</html>
