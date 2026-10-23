@@ -26,7 +26,10 @@
       updateProgress(answer);
     });
   }
-  for (const button of buttons) button.addEventListener('click', () => choose(button.dataset.route));
+  for (const button of buttons) button.addEventListener('click', () => {
+    choose(button.dataset.route);
+    window.reportRadioUse?.();
+  });
   for (const link of document.querySelectorAll('[data-next]')) link.addEventListener('click', () => choose(link.dataset.next));
   showAll.addEventListener('click', () => {
     for (const answer of answers) answer.hidden = false;

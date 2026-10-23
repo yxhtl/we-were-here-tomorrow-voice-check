@@ -36,7 +36,9 @@ esac
 
 node tools/build.cjs
 node tools/check-site.cjs
+node tools/check-analytics.cjs
 node --check app.js
+node --check analytics.js
 node --check tools/serve.cjs
 git diff --check
 echo "分支：$branch"
